@@ -3,14 +3,11 @@
 This repository provides the code to reproduce the paper:  
 
 ```
-@misc{akesbi2023music,
-      title={Music Augmentation and Denoising For Peak-Based Audio Fingerprinting}, 
-      author={Kamil Akesbi and Dorian Desblancs and Benjamin Martin},
-      year={2023},
-      journal={Extended Abstracts for the Late-Breaking Demo Session of ISMIR 2023},
-      eprint={2310.13388},
-      archivePrefix={arXiv},
-      primaryClass={cs.SD}
+@article{akesbi2023music,
+  title={Music Augmentation and Denoising For Peak-Based Audio Fingerprinting},
+  author={Akesbi, Kamil and Desblancs, Dorian and Martin, Benjamin},
+  journal={arXiv preprint arXiv:2310.13388},
+  year={2023}
 }
 ``````
 which can be found [here](https://arxiv.org/abs/2310.13388).
