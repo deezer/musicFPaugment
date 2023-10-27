@@ -1,24 +1,15 @@
 # Music Augmentation and Denoising For Peak-Based Audio Fingerprinting
 
-This repository provides the code to reproduce two papers:  
-```
-@article{kakesbi2023ismir,
-  title={A Noise Augmentation Pipeline for Realistic Query-By-Example Simulation},
-  author={Kamil Akesbi, Dorian Desblancs, Benjamin Martin},
-  journal={Extended Abstracts for the Late-Breaking Demo Session of ISMIR 2023},
-  year={2023},
-  publisher={To update}
-}
-``````
-which can be found at (LINK TO LBD), and:
+This repository provides the code to reproduce the paper:  
 
 ```
 @misc{akesbi2023music,
       title={Music Augmentation and Denoising For Peak-Based Audio Fingerprinting}, 
       author={Kamil Akesbi and Dorian Desblancs and Benjamin Martin},
       year={2023},
+      journal={Extended Abstracts for the Late-Breaking Demo Session of ISMIR 2023},
       eprint={2310.13388},
-      archivePrefix={arXiv},
+      archivePrefix={arXiv},ÒÒ
       primaryClass={cs.SD}
 }
 ``````
