@@ -1,0 +1,84 @@
+[tool.poetry]
+name = "augment_fp"
+version = "0.0.1"
+description = "Music augmentation for audio fingerprinting."
+authors = ["Research <research@deezer.com>"]
+readme = "README.md"
+repository = "https://github.com/deezer/MusicFPAugment"
+homepage = "https://github.com/deezer/MusicFPAugment"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Artistic Software",
+    "Topic :: Multimedia",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development",
+]
+packages = [
+    { include = "augment_fp" },
+]
+
+[[tool.poetry.source]]
+name = "research"
+url = "https://artifacts.deez.re/repository/python-research/simple/"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<3.10"
+tensorflow-io = "^0.32.0"
+tensorflow = "2.12.*"
+librosa = "^0.9.0"
+julius = "^0.2.7"
+numpy = "<1.24"
+streamlit = "^1.21.0"
+torch = "1.11"
+torchaudio = "0.11.0"
+pydub = "^0.25.1"
+psycopg2 = "^2.9.9"
+
+[tool.poetry.dev-dependencies]
+torchinfo = "^1.8.0"
+torchmetrics = "^0.11.0"
+ipython = "^8.14.0"
+tqdm = "^4.64.0"
+types-tqdm = "^4.65.0.1"
+pandas = "^1.5.1"
+openpyxl = "^3.0.10"
+gputil = "^1.4.0"
+wandb = "^0.15.7"
+matplotlib = "^3.7.2"
+nnaudio = "^0.3.2"
+ipykernel = "^6.25.0"
+jupyter = "^1.0.0"
+notebook = "^7.0.2"
+pandas-stubs = "2.0.*"
+mypy = "*"
+black = "*"
+isort = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+pytest-asyncio = "*"
+pytest = "*"
+flake8 = "*"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+strict = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

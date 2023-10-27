@@ -1,0 +1,41 @@
+version: '2.3'
+services:
+  db_fma:
+    env_file:
+      - .env
+    build:
+      context: ${WORKSPACE_SRC}/docker/postgres
+    environment:
+      - POSTGRES_DB=dejavu_fma
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    networks:
+      - db_network
+  python:
+    env_file:
+      - .env
+    build:
+      context: ${WORKSPACE_SRC}
+      dockerfile: ${WORKSPACE_SRC}/docker/python/Dockerfile
+    runtime: nvidia
+    container_name: MusicFPAugment
+    environment:
+        - NVIDIA_VISIBLE_DEVICES=0,1,2
+    devices:
+      - "/dev/snd/:/dev/snd/"
+    ipc: "host"
+    volumes:
+      - ${WORKSPACE_SRC}:/workspace/src/
+      - ${WORKSPACE_NOISE_DATABASES}:/workspace/noise_databases
+      - ${WORKSPACE_FMA}:/workspace/fma
+      - ${WORKSPACE_MTG_JAMENDO_DATASET}:/workspace/mtg-jamendo-dataset
+      - ${WORKSPACE_QUERIES}:/workspace/queries 
+    command: tail -F /dev/null
+    ports: 
+      - "8503:8503"
+    depends_on:
+      - db_fma
+    networks:
+      - db_network
+networks:
+  db_network:

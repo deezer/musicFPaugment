@@ -1,0 +1,13 @@
+*/__pycache__/*
+/__pycache__/*
+.ipynb_checkpoints
+__pycache__
+.vscode
+*.pklz
+*.ipynb
+mp3s/*
+*.wav
+*.pth
+*.pt
+monitoring/*
+*.json 
