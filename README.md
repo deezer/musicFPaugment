@@ -13,7 +13,7 @@ This repository provides the code to reproduce the paper:
       primaryClass={cs.SD}
 }
 ``````
-which can be found [here](https:ÒÒÒ//arxiv.org/abs/2310.13388).
+which can be found [here](https://arxiv.org/abs/2310.13388).
 
 ## Setup
 
