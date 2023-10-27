@@ -12,7 +12,7 @@ This repository provides the code to reproduce the paper:
 ``````
 which can be found [here](https://arxiv.org/abs/2310.13388).
 
-Thiw work has benn published as an Extended Abstracts for the Late-Breaking Demo Session of ISMIR 2023.
+This work is going to be presented at the Late-Breaking Demo Session of ISMIR 2023.
 
 ## Setup
 
