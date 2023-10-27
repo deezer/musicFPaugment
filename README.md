@@ -9,11 +9,11 @@ This repository provides the code to reproduce the paper:
       year={2023},
       journal={Extended Abstracts for the Late-Breaking Demo Session of ISMIR 2023},
       eprint={2310.13388},
-      archivePrefix={arXiv},ÒÒ
+      archivePrefix={arXiv},
       primaryClass={cs.SD}
 }
 ``````
-which can be found [here](https://arxiv.org/abs/2310.13388).
+which can be found [here](https:ÒÒÒ//arxiv.org/abs/2310.13388).
 
 ## Setup
 
