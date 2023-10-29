@@ -86,9 +86,10 @@ def read(
         assert denoising_model in ["demucs", "unet"]
 
     sr = afp_settings["dejavu"]["samplerate"]
-    resampling = Resample(WAVEFORM_SAMPLING_RATE, sr)
 
     if filename.split(".")[-1] == "pkl":
+        resampling = Resample(WAVEFORM_SAMPLING_RATE, sr)
+
         with open(
             filename,
             "rb",
@@ -108,7 +109,8 @@ def read(
             channels = [resampling(audio) * 32767]
 
     elif filename.split(".")[-1] == "mp3":
-        audio, _ = torchaudio.load(filename)
+        audio, sr_origin = torchaudio.load(filename)
+        resampling = Resample(sr_origin, sr)
         audio = audio.mean(axis=0)
         channels = [resampling(audio) * 32767]
 
