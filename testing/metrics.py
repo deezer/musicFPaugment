@@ -183,7 +183,7 @@ class F1score(nn.Module):
             device (str):
                 "cpu", "gpu", ...
         """
-        p = self.rec(predicted, gt, device)
+        p = self.prec(predicted, gt, device)
         r = self.rec(predicted, gt, device)
 
         if math.isclose(p + r, 0.0):
